@@ -46,6 +46,7 @@
   text-transform: capitalize;
 }
 .Select input {
+  cursor: pointer;
   width: 16px;
   height: 16px;
   min-width: 16px;
