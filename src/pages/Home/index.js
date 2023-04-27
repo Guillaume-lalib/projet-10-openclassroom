@@ -13,7 +13,10 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const { last } = useData()
+  const { data } = useData()
+  const lasted = data?.events
+
+  console.log(lasted);
   return <>
     <header>
       <Menu />
@@ -117,9 +120,9 @@ const Page = () => {
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
         <EventCard
-          imageSrc={last?.cover}
-          title={last?.title}
-          date={new Date(last?.date)}
+          imageSrc={data?.cover}
+          title={data?.title}
+          date={new Date(data?.date)}
           small
           label="boom"
         />
@@ -130,16 +133,16 @@ const Page = () => {
         <div>01 23 45 67 89</div>
         <div>contact@77events.com</div>
         <div>
-          <a href="#twitch">
+          <a href="#twitch" aria-label="redirection vers twitch">
             <Icon name="twitch" />
           </a>
-          <a href="#facebook">
+          <a href="#facebook" aria-label="redirection vers facebook">
             <Icon name="facebook" />
           </a>
-          <a href="#twitter">
+          <a href="#twitter" aria-label="redirection vers twitter">
             <Icon name="twitter" />
           </a>
-          <a href="#youtube">
+          <a href="#youtube" aria-label="redirection vers youtube" >
             <Icon name="youtube" />
           </a>
         </div>

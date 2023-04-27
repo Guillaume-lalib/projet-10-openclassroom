@@ -51,6 +51,7 @@ const Select = ({
         </ul>
         <input type="hidden" value={value || ""} name={name} />
         <button
+          aria-label="ouvrire et fermé le menu"
           type="button"
           data-testid="collapse-button-testid"
           className={collapsed ? "open" : "close"}
