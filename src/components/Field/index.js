@@ -21,7 +21,7 @@ const Field = ({ type = FIELD_TYPES.INPUT_TEXT, label, name, placeholder }) => {
       );
       break;
     case FIELD_TYPES.TEXTAREA:
-      component = <textarea name={name} data-testid="field-testid" />;
+      component = <textarea name={name} placeholder="Votre message" data-testid="field-testid" />;
       break;
     default:
       component = (
@@ -47,11 +47,11 @@ Field.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
 };
- Field.defaultProps = {
-   label: "",
-   placeholder: "",
-   type: FIELD_TYPES.INPUT_TEXT,
-   name: "field-name",
- }
+Field.defaultProps = {
+  label: "",
+  placeholder: "",
+  type: FIELD_TYPES.INPUT_TEXT,
+  name: "field-name",
+}
 
 export default Field;
