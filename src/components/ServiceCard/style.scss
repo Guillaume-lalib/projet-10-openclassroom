@@ -11,6 +11,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  img {
+    width: 364px;
+    height: 332px;
+  }
   &__textContainer {
     color: $black;
     font-size: 15px;

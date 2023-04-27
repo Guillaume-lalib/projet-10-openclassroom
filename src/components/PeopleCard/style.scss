@@ -16,6 +16,10 @@
   &__imageContainer {
     min-height: 252px;
     overflow: hidden;
+    img {
+      height: 374px;
+      width: 288px;
+    }
   }
   &__descriptionContainer {
     color: $black;
