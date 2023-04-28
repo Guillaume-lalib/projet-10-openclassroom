@@ -17,7 +17,6 @@ const Page = () => {
   const lasted = data?.events
     .sort((event1, event2) => new Date(event2.date) - new Date(event1.date))
     .shift();
-  console.log(lasted);
   return <>
     <header>
       <Menu />

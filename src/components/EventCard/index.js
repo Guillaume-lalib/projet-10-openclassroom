@@ -23,23 +23,27 @@ const EventCard = ({
     </div>
     <div className="EventCard__descriptionContainer">
       <div className="EventCard__title">{title}</div>
+
       <div className="EventCard__month">{getMonth(date)}</div>
     </div>
   </div>
 );
 
 EventCard.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
   date: PropTypes.instanceOf(Date).isRequired,
-  title: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  title: PropTypes.string,
   small: PropTypes.bool,
-  label: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  label: PropTypes.string,
 };
 
 EventCard.defaultProps = {
   imageAlt: "image",
   small: false,
-}
+};
 
 export default EventCard;
