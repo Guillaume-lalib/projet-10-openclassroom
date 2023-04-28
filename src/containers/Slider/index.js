@@ -42,10 +42,11 @@ const Slider = () => {
               {byDateDesc?.map((_, radioIdx) => (
                 <input
                   aria-label={`image N°${index}`}
-                  key={event.id}
+                  key={_.date}
                   type="radio"
                   name="radio-button"
                   checked={index === radioIdx}
+                  readOnly
                 />
               ))}
             </div>
